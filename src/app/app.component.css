@@ -1,0 +1,34 @@
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2% 0;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a.active {
+    color: crimson;
+}
+
+.navbar .logout {
+    border: solid 1px red;
+    padding: 1% 2%;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.navbar .logout:hover {
+    border-color: white;
+    background: rgb(161, 18, 18);
+}
+
+.navbar .logout:active {
+    border-color: transparent;
+    background: red;
+    /* color: #000; */
+}
