@@ -23,6 +23,7 @@
     "@ngx-loading-bar/core": "^4.2.0",
     "@ngx-loading-bar/router": "^4.2.0",
     "atropos": "^2.0.2",
+    "http-server": "^14.1.1",
     "ng2-slim-loading-bar": "^4.0.0",
     "ngx-lightbox": "^2.0.0",
     "ngx-toastr": "^10.2.0",
