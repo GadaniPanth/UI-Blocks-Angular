@@ -10,6 +10,7 @@ import { SwiperComponent } from './swiper/swiper.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { FancyBoxComponent } from './fancy-box/fancy-box.component';
 import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
+import { AtroposComponent } from './atropos/atropos.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
     SwiperComponent,
     FancyBoxComponent,
     SweetAlertComponent,
+    AtroposComponent,
   ],
   imports: [
     // BrowserAnimationsModule,

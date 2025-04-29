@@ -1,0 +1,21 @@
+<div class="grid-4">
+    <div #atroposEl class="atropos my-atropos" *ngFor="let img of atropos; let i =index">
+        <div class="atropos-scale">
+            <div class="atropos-rotate">
+                <div class="atropos-inner">
+
+                    <!-- Brand logo at top -->
+                    <img src="assets/images/atropos/ps5-logo.svg" alt="Brand Logo" class="brand-logo"
+                        data-atropos-offset="2" />
+
+                    <!-- Main background image -->
+                    <img [src]='img.bg' alt="Atropos Background" class="background-img" data-atropos-offset="0" />
+
+                    <!-- Logo at bottom -->
+                    <img [src]='img.logo' alt="Atropos Logo" class="bottom-logo" data-atropos-offset="10" />
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

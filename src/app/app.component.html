@@ -8,10 +8,12 @@
       true}" class="font_20">Fancybox</a>
     <a routerLink="/sw-alert" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
       true}" class="font_20">Sweet Alert</a>
+    <a routerLink="/atropos" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+      true}" class="font_20">Atropos</a>
   </div>
   <router-outlet></router-outlet>
   <a [href]="referenceUrl" *ngIf="referenceUrl" target="_blank" rel="noopener noreferrer" class="ref_url">Reference</a>
 </div>
-<div class="version_div">
+<div class="version_div" *ngIf="version">
   <h2 class="font_20">v{{version}}</h2>
 </div>

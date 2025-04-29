@@ -5,6 +5,7 @@ import { title } from 'process';
 import { SwiperComponent } from './swiper/swiper.component';
 import { FancyBoxComponent } from './fancy-box/fancy-box.component';
 import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
+import { AtroposComponent } from './atropos/atropos.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,11 @@ const routes: Routes = [
     path: 'swiper',
     component: SwiperComponent,
     data: { title: 'swiper', version: '6.8.4', referenceUrl: 'https://v8.swiperjs.com/' }
+  },
+  {
+    path: 'atropos',
+    component: AtroposComponent,
+    data: { title: 'atropos', version: null, referenceUrl: 'https://atroposjs.com/' }
   },
   {
     path: 'fancybox',

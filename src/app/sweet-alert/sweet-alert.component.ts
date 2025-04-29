@@ -34,7 +34,7 @@ export class SweetAlertComponent implements OnInit {
       if (result.isConfirmed) {
         this.alertService.success('Chosen yes!');
       } else {
-        this.alertService.success('Chosen no!');
+        this.alertService.error('Chosen no!');
       }
     });
   }

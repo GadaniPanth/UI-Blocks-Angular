@@ -24,13 +24,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/atropos/atropos.min.css",
               "src/styles.css",
               "node_modules/swiper/swiper-bundle.min.css",
               "node_modules/ngx-lightbox/lightbox.css",
               "node_modules/@fancyapps/ui/dist/fancybox/fancybox.css"
             ],
             "scripts": [
-               "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js"
+               "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
+               "node_modules/atropos/atropos.min.js"
             ]
           },
           "configurations": {
