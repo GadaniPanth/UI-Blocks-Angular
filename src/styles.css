@@ -62,6 +62,23 @@ img {
     }
 }
 
+.code_url {
+    display: block;
+    float: unset;
+    text-decoration: none;
+    color: white;
+    margin-top: 15px;
+    width: fit-content;
+
+    &:active {
+        color: crimson;
+    }
+
+    &:hover {
+        color: cyan;
+    }
+}
+
 .version_div {
     position: absolute;
     top: 85px;
