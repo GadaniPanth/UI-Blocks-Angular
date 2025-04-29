@@ -16,27 +16,27 @@ const routes: Routes = [
   {
     path: 'lightbox',
     component: LightBoxUiComponent,
-    data: { title: 'lightbox', version: '2.0.0', referenceUrl: 'https://www.npmjs.com/package/ngx-lightbox' }
+    data: { title: 'Lightbox Preview', version: '2.0.0', referenceUrl: 'https://www.npmjs.com/package/ngx-lightbox' }
   },
   {
     path: 'swiper',
     component: SwiperComponent,
-    data: { title: 'swiper', version: '6.8.4', referenceUrl: 'https://v8.swiperjs.com/' }
+    data: { title: 'Swiper Preview', version: '6.8.4', referenceUrl: 'https://v8.swiperjs.com/' }
   },
   {
     path: 'atropos',
     component: AtroposComponent,
-    data: { title: 'atropos', version: null, referenceUrl: 'https://atroposjs.com/' }
+    data: { title: 'Atropos Preview', version: null, referenceUrl: 'https://atroposjs.com/' }
   },
   {
     path: 'fancybox',
     component: FancyBoxComponent,
-    data: { title: 'fancybox', version: '5.0.36', referenceUrl: 'https://fancyapps.com/fancybox/' }
+    data: { title: 'Fancybox Preview', version: '5.0.36', referenceUrl: 'https://fancyapps.com/fancybox/' }
   },
   {
     path: 'sw-alert',
     component: SweetAlertComponent,
-    data: { title: 'sw-alert', version: '11.17.2', referenceUrl: 'https://sweetalert2.github.io/' }
+    data: { title: 'Sweet Alert Preview', version: '11.17.2', referenceUrl: 'https://sweetalert2.github.io/' }
   }
 ];
 
