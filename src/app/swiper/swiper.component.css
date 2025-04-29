@@ -1,0 +1,29 @@
+img {
+    width: 100%;
+}
+
+.swiper-slide {
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+.swiper-container {
+    width: 60%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: cyan;
+}
+
+.swiper-container-horizontal>.swiper-pagination-progressbar {
+    height: 2px !important;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+:host {
+    --swiper-pagination-color: crimson;
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AlertService } from './alert.service';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -8,28 +8,30 @@ import { AlertService } from './alert.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  isUserAuthorized: boolean = false;
+  referenceUrl: string | null = null;
+  version: string | null = null;
 
-  constructor(private router: Router, private alertShow: AlertService) {
-    if (localStorage.getItem('authToken')) {
-      this.isUserAuthorized = true;
-    }
+  constructor(private router: Router, private route: ActivatedRoute) {
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        map(() => {
+          let current = this.route.root;
+          while (current.firstChild) {
+            current = current.firstChild;
+          }
+          return {
+            referenceUrl: current.snapshot.data['referenceUrl'] || null,
+            version: current.snapshot.data['version'] || null
+          };
+        })
+      )
+      .subscribe(data => {
+        this.referenceUrl = data.referenceUrl;
+        this.version = data.version;
+      });
   }
 
   ngOnInit() {
-  }
-
-  logout(): void {
-    this.alertShow.confirm('You want to log out? ☹').then((result) => {
-      if (result.isConfirmed) {
-        this.alertShow.success('See you later! 👋');
-        localStorage.removeItem('authToken');
-        this.isUserAuthorized = false;
-        // console.log('logged out');
-        this.router.navigate(['login']);
-      } else {
-        this.alertShow.info('Welcome back! 😊');
-      }
-    })
   }
 }

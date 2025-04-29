@@ -1,45 +1,37 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { UsersTableComponent } from './users-table/users-table.component';
-import { CreateUserFormComponent } from './create-user-form/create-user-form.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AuthGuard } from './auth.guard';
+import { LightBoxUiComponent } from './light-box-ui/light-box-ui.component';
+import { title } from 'process';
+import { SwiperComponent } from './swiper/swiper.component';
+import { FancyBoxComponent } from './fancy-box/fancy-box.component';
+import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'user-table',
+    redirectTo: '/lightbox',
     pathMatch: 'full'
   },
   {
-    path: 'login',
-    component: LoginPageComponent,
-    data: { title: 'Login' },
+    path: 'lightbox',
+    component: LightBoxUiComponent,
+    data: { title: 'lightbox', version: '2.0.0', referenceUrl: 'https://www.npmjs.com/package/ngx-lightbox' }
   },
   {
-    path: 'user-table',
-    component: UsersTableComponent,
-    data: { title: 'User Data Table' },
-    canActivate: [AuthGuard],
+    path: 'swiper',
+    component: SwiperComponent,
+    data: { title: 'swiper', version: '6.8.4', referenceUrl: 'https://v8.swiperjs.com/' }
   },
   {
-    path: 'create-user',
-    component: CreateUserFormComponent,
-    data: { title: 'Register User' },
-    canActivate: [AuthGuard],
+    path: 'fancybox',
+    component: FancyBoxComponent,
+    data: { title: 'fancybox', version: '5.0.36', referenceUrl: 'https://fancyapps.com/fancybox/' }
   },
   {
-    path: 'edit_user/:id',
-    component: CreateUserFormComponent,
-    data: { title: 'Edit User' },
-    canActivate: [AuthGuard],
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent,
-    data: { title: 'Page Not Found' }
-  },
+    path: 'sw-alert',
+    component: SweetAlertComponent,
+    data: { title: 'sw-alert', version: '11.17.2', referenceUrl: 'https://sweetalert2.github.io/' }
+  }
 ];
 
 @NgModule({

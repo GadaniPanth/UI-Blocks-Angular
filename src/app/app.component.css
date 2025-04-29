@@ -1,34 +1,48 @@
-.navbar {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2% 0;
-    align-items: center;
+.main_content {
+    width: 100%;
+    /* height: 100%; */
+    padding: 5%;
+    height: max-content;
 }
 
-.navbar a {
+.links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50PX;
+
+    a {
+        text-decoration: none;
+        color: white;
+
+        &.active {
+            color: cyan;
+        }
+    }
+}
+
+.font_20 {
+    font-size: 20px;
+}
+
+.ref_url {
+    display: block;
+    float: unset;
     text-decoration: none;
     color: white;
+    margin-top: 55px;
+    width: fit-content;
+
+    &:active {
+        color: cyan;
+    }
+
+    &:hover {
+        color: crimson;
+    }
 }
 
-.navbar a.active {
-    color: crimson;
-}
-
-.navbar .logout {
-    border: solid 1px red;
-    padding: 1% 2%;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all .5s ease;
-}
-
-.navbar .logout:hover {
-    border-color: white;
-    background: rgb(161, 18, 18);
-}
-
-.navbar .logout:active {
-    border-color: transparent;
-    background: red;
-    /* color: #000; */
+.version_div {
+    position: absolute;
+    top: 12%;
+    left: 5%;
 }

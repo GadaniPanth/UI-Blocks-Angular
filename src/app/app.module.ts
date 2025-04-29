@@ -2,21 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { UsersTableComponent } from './users-table/users-table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { CreateUserFormComponent } from './create-user-form/create-user-form.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LightBoxUiComponent } from './light-box-ui/light-box-ui.component';
+import { SwiperComponent } from './swiper/swiper.component';
+import { LightboxModule } from 'ngx-lightbox';
+import { FancyBoxComponent } from './fancy-box/fancy-box.component';
+import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginPageComponent,
-    UsersTableComponent,
-    CreateUserFormComponent,
-    PageNotFoundComponent,
+    LightBoxUiComponent,
+    SwiperComponent,
+    FancyBoxComponent,
+    SweetAlertComponent,
   ],
   imports: [
     // BrowserAnimationsModule,
@@ -30,6 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent],

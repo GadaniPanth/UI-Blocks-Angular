@@ -11,8 +11,8 @@ export class AlertService {
       toast: true,
       position: 'bottom-end',
       icon: icon,
-      // title: title, // define if needed
-      text: message,
+      title: title, // define if needed
+      text: message,// define if needed
       showConfirmButton: false,
       showCloseButton: true,
       timer: 3000,
@@ -49,12 +49,12 @@ export class AlertService {
       background: '#2f2f2f',
       color: '#fff',
       showCancelButton: true,
-      confirmButtonText: 'Yes',
-      cancelButtonText: 'No',
+      confirmButtonText: '✔️',
+      cancelButtonText: '❌',
       customClass: {
         popup: 'small-toast'
       },
-      
+
     });
   }
 }
