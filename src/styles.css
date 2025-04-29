@@ -52,14 +52,14 @@ img {
     color: white;
     margin-top: 55px;
     width: fit-content;
+}
 
-    &:active {
-        color: cyan;
-    }
+.ref_url:active {
+    color: cyan;
+}
 
-    &:hover {
-        color: crimson;
-    }
+.ref_url:hover {
+    color: crimson;
 }
 
 .code_url {
@@ -69,14 +69,14 @@ img {
     color: white;
     margin-top: 15px;
     width: fit-content;
+}
 
-    &:active {
-        color: crimson;
-    }
+.code_url:active {
+    color: crimson;
+}
 
-    &:hover {
-        color: cyan;
-    }
+.code_url:hover {
+    color: cyan;
 }
 
 .version_div {
