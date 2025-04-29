@@ -12,12 +12,12 @@
 
 }
 
-.link a {
+.links a {
     text-decoration: none;
     color: white;
 }
 
-.link a.active {
+.links a.active {
     color: cyan;
 }
 
