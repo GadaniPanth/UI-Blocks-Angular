@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LightBoxUiComponent } from './light-box-ui/light-box-ui.component';
-import { title } from 'process';
+import { title, version } from 'process';
 import { SwiperComponent } from './swiper/swiper.component';
 import { FancyBoxComponent } from './fancy-box/fancy-box.component';
 import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
@@ -48,7 +48,7 @@ const routes: Routes = [
   {
     path: 'tab-panel',
     component: TabPanelComponent,
-    data: { title: 'Tab-Panel Preview', version: '11.17.2', referenceUrl: 'https://material.angular.dev/components/tabs/' }
+    data: { title: 'Tab-Panel Preview', version: null , referenceUrl: 'https://material.angular.dev/components/tabs/' }
   }
 ];
 

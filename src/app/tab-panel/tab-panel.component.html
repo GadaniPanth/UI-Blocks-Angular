@@ -1,1 +1,15 @@
-<p>tab-panel works!</p>
+<div class="tab-container">
+    <div class="tabs">
+        <button class="tab" *ngFor="let tab of tabs" [class.active]="activeTab === tab.id" (click)="selectTab(tab.id)">
+            {{ tab.label }}
+        </button>
+    </div>
+
+    <div class="tab-content">
+        <div *ngFor="let tab of tabs" [id]="tab.id" class="content" [class.active]="activeTab === tab.id"
+            [ngStyle]="{'text-align': tab.align}">
+            <h2>{{ tab.title }}</h2>
+            <p>{{ tab.content }}</p>
+        </div>
+    </div>
+</div>
