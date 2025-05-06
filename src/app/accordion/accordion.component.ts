@@ -23,14 +23,24 @@ export class AccordionComponent implements OnInit {
 
   ngOnInit() {}
 
-  toggleContent(index: number) {
-    this.sections[index].isOpen = !this.sections[index].isOpen;
+  // toggleContent(index: number) {
+  //   this.sections[index].isOpen = !this.sections[index].isOpen;
 
-    if (this.sections[index].isOpen) {
-      setTimeout(() => {
-        this.scrollToSection(index);
-      }, 100);
-    }
+  //   if (this.sections[index].isOpen) {
+  //     setTimeout(() => {
+  //       this.scrollToSection(index);
+  //     }, 100);
+  //   }
+
+  toggleContent(index: number) {
+    this.sections.map((tab, i) => {
+      if (i == index) {
+        tab.isOpen = !tab.isOpen;
+      } else {
+        tab.isOpen = false;
+      }
+    });
+    
   }
 
   scrollToSection(index: number) {
