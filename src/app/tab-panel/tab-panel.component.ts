@@ -24,14 +24,14 @@ export class TabPanelComponent implements OnInit {
       label: "Tab 2",
       title: "Content for Tab 2",
       content: "This is the content for the second tab.",
-      align: "center",
+      align: "left",
     },
     {
       id: "tab3",
       label: "Tab 3",
       title: "Content for Tab 3",
       content: "This is the content for the third tab.",
-      align: "right",
+      align: "left",
     },
   ];
 
