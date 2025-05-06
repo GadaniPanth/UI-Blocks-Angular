@@ -5,12 +5,14 @@
   
   .accordion-item {
     border: 1px solid #ddd;
-    margin: 5px 0;
+    margin: 10px 0;
     padding: 10px;
+    border-radius: 30px;
   }
   
   .accordion-header {
-    background-color: #f7f7f7;
+    color: white;
+    background-color: transparent;
     border: none;
     width: 100%;
     padding: 10px;
@@ -33,7 +35,8 @@
   }
   
   .accordion-body {
-    background-color: #f1f1f1;
+    background-color: transparent;
+    color: white;
     padding: 10px;
     overflow-y: auto; 
     max-height: 1000px; 
@@ -45,6 +48,7 @@
     height: auto; 
     display: block;
     padding: 10px 0; 
+    color: white;
   }
   
   @media (max-width: 320px) {

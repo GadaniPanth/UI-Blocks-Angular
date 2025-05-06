@@ -50,7 +50,6 @@ export class FancyBoxComponent implements OnInit {
     //   fit: 'contain'
     // })
   }
-
   showFancyBox() {
     Fancybox.show(this.images, {
       Carousel: {
@@ -60,6 +59,19 @@ export class FancyBoxComponent implements OnInit {
       transitionEffect: "tube",
       animationEffect: "zoom",
       fit: "contain",
+      on: {
+        initCarousel(fancybox) {
+          const container = fancybox.container;
+          container.addEventListener("wheel", (event) => {
+            event.preventDefault();
+            if (event.deltaY > 0) {
+              fancybox.next();
+            } else {
+              fancybox.prev();
+            }
+          });
+        }
+      }
     })
   }
 }

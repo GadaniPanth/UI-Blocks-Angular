@@ -11,6 +11,8 @@ import { LightboxModule } from 'ngx-lightbox';
 import { FancyBoxComponent } from './fancy-box/fancy-box.component';
 import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
 import { AtroposComponent } from './atropos/atropos.component';
+import { TabPanelComponent } from './tab-panel/tab-panel.component';
+import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { AtroposComponent } from './atropos/atropos.component';
     FancyBoxComponent,
     SweetAlertComponent,
     AtroposComponent,
+    TabPanelComponent,
+    AccordionComponent,
   ],
   imports: [
     // BrowserAnimationsModule,

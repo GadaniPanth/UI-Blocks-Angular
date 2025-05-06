@@ -6,6 +6,8 @@ import { SwiperComponent } from './swiper/swiper.component';
 import { FancyBoxComponent } from './fancy-box/fancy-box.component';
 import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
 import { AtroposComponent } from './atropos/atropos.component';
+import { AccordionComponent } from './accordion/accordion.component';
+import { TabPanelComponent } from './tab-panel/tab-panel.component';
 
 const routes: Routes = [
   {
@@ -37,6 +39,16 @@ const routes: Routes = [
     path: 'sw-alert',
     component: SweetAlertComponent,
     data: { title: 'Sweet Alert Preview', version: '11.17.2', referenceUrl: 'https://sweetalert2.github.io/' }
+  },
+  {
+    path: 'accordion',
+    component: AccordionComponent,
+    data: { title: 'Accordion Preview', version: '12.2.13', referenceUrl: 'https://material.angular.dev/cdk/accordion/' }
+  },
+  {
+    path: 'tab-panel',
+    component: TabPanelComponent,
+    data: { title: 'Tab-Panel Preview', version: '11.17.2', referenceUrl: 'https://material.angular.dev/components/tabs/' }
   }
 ];
 
