@@ -66,22 +66,42 @@ export class AppComponent implements OnInit {
     //   this.mouseY = y;  // Update mouseY
     // });
 
+    // Center cursor-circle on pointer
     gsap.set('.cursor-circle', { xPercent: -50, yPercent: -50 });
 
+    // Smooth motion
     this.xTo = gsap.quickTo('.cursor-circle', 'x', { duration: 0.6, ease: 'power3' });
     this.yTo = gsap.quickTo('.cursor-circle', 'y', { duration: 0.6, ease: 'power3' });
 
+    // Mouse tracking
     window.addEventListener('mousemove', this.mouseMoveHandler.bind(this));
 
-    const navItems = document.querySelectorAll('.nav-item');
-    navItems.forEach(item => {
+    // Select all interactive and visible content (text, buttons, links, images)
+    const interactiveElements = document.querySelectorAll(`
+  h1, h2, h3, h4, h5, h6,
+  p, span, li, a, button,
+  img, input, textarea, label, fixed-container
+`);
+
+    interactiveElements.forEach(item => {
       item.addEventListener('mouseenter', () => {
-        gsap.to('.cursor-circle', { width: '42px', height: '42px', backgroundColor: 'transparent', duration: 0.3 });
+        gsap.to('.cursor-circle', {
+          width: '42px',
+          height: '42px',
+          backgroundColor: 'transparent',
+          duration: 0.3
+        });
       });
       item.addEventListener('mouseleave', () => {
-        gsap.to('.cursor-circle', { width: '12px', height: '12px', backgroundColor: 'cyan', duration: 0.3 });
+        gsap.to('.cursor-circle', {
+          width: '12px',
+          height: '12px',
+          backgroundColor: 'cyan',
+          duration: 0.3
+        });
       });
     });
+
   }
 
   ngOnDestroy(): void {

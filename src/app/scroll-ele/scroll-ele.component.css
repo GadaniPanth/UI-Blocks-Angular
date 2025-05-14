@@ -1,3 +1,11 @@
+.swiper-slide h2 {
+    will-change: transform, opacity;
+}
+
+.op1 {
+    opacity: 1 !important;
+}
+
 .container {
     width: 100%;
     /* height: fit-content; */
@@ -7,27 +15,14 @@
     /* background: #1e1e1e; */
 }
 
-.img-container,
-.fixed-container {
-    height: 100vh;
-    scroll-snap-align: start;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.img-container:last-of-type {
-    /* height: 80vh; */
-}
 
 .fixed-container {
     background: transparent;
     position: fixed;
-    top: 0;
-    /* z-index: -1; */
+    top: 40%;
     width: 100%;
-    z-index: 9999;
+    left: 0;
+    height: fit-content;
 }
 
 .img-container h2,
@@ -46,6 +41,10 @@
     width: 100%;
     text-align: center;
     transform: translateY(-50%);
+}
+
+
+.img-container h2:not(:first-of-type) {
     opacity: 0;
 }
 
