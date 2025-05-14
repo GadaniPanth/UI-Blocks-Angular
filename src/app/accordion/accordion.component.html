@@ -1,4 +1,4 @@
-<div class="accordion pd50">
+<div class="accordion pd50 section-padding mlr-80">
   <div *ngFor="let section of sections; let i = index" class="accordion-item">
     <button (click)="toggleContent(i)" class="accordion-header" [attr.id]="'accordion-' + i">
       <span class="accordion-title">{{ section.title }}</span>
