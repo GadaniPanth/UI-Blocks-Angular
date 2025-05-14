@@ -111,11 +111,12 @@
   font-weight: bold;
   font-size: 12px;
   text-decoration: none;
-  padding: 5px 0;
 }
 
 .nav-item a {
   text-decoration: none;
+  padding: 5px 0;
+
   color: inherit;
   width: fit-content;
 }
