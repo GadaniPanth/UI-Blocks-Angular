@@ -1,0 +1,47 @@
+🔁 Carousels / Sliders
+Swiper.js – Feature-rich modern touch slider.
+
+Glide.js – Lightweight and fast with modular architecture.
+
+Splide.js – Flexible with RTL, vertical, thumbnails, and auto height.
+
+Flickity – Touch-friendly, responsive, and great for galleries.
+
+🖼️ Lightbox / Modal Gallery
+Fancybox – Responsive lightbox with video, iframe, and AJAX support.
+
+Lightbox2 – Classic and lightweight image overlay.
+
+PhotoSwipe – Mobile-friendly image gallery with zoom gestures.
+
+GLightbox – Pure JavaScript lightbox with video and iframe support.
+
+Micromodal.js – Accessible modal dialog library.
+
+🎢 Parallax Effects
+Rellax.js – Lightweight parallax library with fine control.
+
+Parallax.js – Easy-to-use with support for mouse and scroll movement.
+
+Locomotive Scroll – Smooth scrolling with parallax and scroll-based animations.
+
+simpleParallax.js – Apply parallax to images with minimal setup.
+
+🎨 Animation & Scroll Effects
+AOS (Animate On Scroll) – Easy-to-use scroll animation library.
+
+ScrollMagic – Control animations based on scroll position.
+
+GSAP (GreenSock) – Industry-standard for animation, including scroll triggers.
+
+Lottie by Airbnb – Render animations exported from Adobe After Effects.
+
+🧩 UI Component Libraries (With Prebuilt Blocks)
+Tailwind UI / Flowbite – Tailwind CSS-based components with modals, carousels, and galleries.
+
+Bootstrap Components – Classic modal, carousel, accordion, etc.
+
+Material UI (MUI) – React components based on Google’s Material Design.
+
+DaisyUI – Utility-first Tailwind CSS components.
+
