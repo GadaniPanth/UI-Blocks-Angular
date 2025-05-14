@@ -88,7 +88,7 @@
 /* Make nav items horizontal */
 .nav-list {
   display: flex;
-  gap: 15px;
+  gap: 8px;
   list-style: none;
   margin: 0;
   padding: 0;
