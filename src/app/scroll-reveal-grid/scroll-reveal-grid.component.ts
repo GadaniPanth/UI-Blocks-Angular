@@ -12,16 +12,20 @@ export class ScrollRevealGridComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
     gsap.registerPlugin(ScrollTrigger);
     const grid = document.querySelector('.grid') as HTMLElement;
 
-    console.log(grid.scrollHeight);
+    console.log(grid);
 
     gsap.to('.grid', {
       scale: 1,
       scrollTrigger: {
         trigger: '.container',
         start: 'top 0',
+        end: '+=500',
         scrub: true,
         // markers: true,
         pin: true
