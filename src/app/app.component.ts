@@ -68,12 +68,20 @@ export class AppComponent implements OnInit {
 
     gsap.set('.cursor-circle', { xPercent: -50, yPercent: -50 });
 
-    // Create quickTo functions
     this.xTo = gsap.quickTo('.cursor-circle', 'x', { duration: 0.6, ease: 'power3' });
     this.yTo = gsap.quickTo('.cursor-circle', 'y', { duration: 0.6, ease: 'power3' });
 
-    // Add event listener
-    window.addEventListener('mousemove', this.mouseMoveHandler);
+    window.addEventListener('mousemove', this.mouseMoveHandler.bind(this));
+
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        gsap.to('.cursor-circle', { width: '42px', height: '42px', backgroundColor: 'transparent', duration: 0.3 });
+      });
+      item.addEventListener('mouseleave', () => {
+        gsap.to('.cursor-circle', { width: '12px', height: '12px', backgroundColor: 'cyan', duration: 0.3 });
+      });
+    });
   }
 
   ngOnDestroy(): void {

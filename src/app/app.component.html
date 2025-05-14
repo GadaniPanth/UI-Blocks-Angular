@@ -1,29 +1,47 @@
-<!-- <div class="main_content" style="overflow-x: hidden;">
-  <div class="cursor-circle" [ngStyle]="{ top: mouseY + 'px', left: mouseX + 'px' }"></div>
-  <div class="links">
-    <a routerLink="/lightbox" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-      true}" class="font_20">LightBox</a>
-    <a routerLink="/swiper" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-      true}" class="font_20">Swiper</a>
-    <a routerLink="/fancybox" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-      true}" class="font_20">Fancybox</a>
-    <a routerLink="/sw-alert" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-      true}" class="font_20">Sweet Alert</a>
-    <a routerLink="/atropos" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-      true}" class="font_20">Atropos</a>
-    <a routerLink="/accordion" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-      true}" class="font_20">Accordion</a>
-    <a routerLink="/tab-panel" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-      true}" class="font_20">Tab Panel</a>
-    <a routerLink="/scrolling-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-      true}" class="font_20">Scrolling Page </a>
-    <a routerLink="/parallex" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-      true}" class="font_20">Parallex effect </a>
-    <a routerLink="/scroll-grid" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-      true}" class="font_20">Scroll Grid</a>
-    <a routerLink="/scroll" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-      true}" class="font_20">Scroll Text</a>
-  </div>
+<div class="cursor-circle" [ngStyle]="{ top: mouseY + 'px', left: mouseX + 'px' }"></div>
+<div class="main_content" style="overflow-x: hidden;">
+  <nav class="top-nav">
+    <ul class="nav-list">
+      <!-- <ul> -->
+      <li class="nav-item">
+        <a routerLink="/lightbox" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">LightBox</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/swiper" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Swiper</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/fancybox" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Fancybox</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/sw-alert" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Sweet Alert</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/atropos" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Atropos</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/accordion" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accordion</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/tab-panel" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Tab Panel</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/scrolling-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Scrolling
+          Page</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/parallex" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Parallex
+          effect</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/scroll-grid" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Scroll Grid</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/scroll" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Scroll Text</a>
+      </li>
+      <!-- </ul> -->
+    </ul>
+  </nav>
+
   <router-outlet></router-outlet>
 </div>
 <div class="url_div">
@@ -32,6 +50,6 @@
 </div>
 <div class="version_div" *ngIf="version">
   <h2 class="font_20">v{{version}}</h2>
-</div> -->
+</div>
 
-<app-extra></app-extra>
+<!-- <app-extra></app-extra> -->

@@ -103,14 +103,19 @@ img {
 }
 
 
+
+/* cursor style */
+
 .cursor-circle {
     position: fixed;
     width: 12px;
     height: 12px;
-    background-color: red;
+    background-color: cyan;
+    border: solid 1px cyan;
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: top 0.05s linear, left 0.05s linear;
     z-index: 1000;
+    scale: 1;
 }
