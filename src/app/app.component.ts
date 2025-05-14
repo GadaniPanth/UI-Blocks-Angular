@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
+import { MouseCursorService } from './mouse-cursor.service';  // Import MouseCursorService
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,16 @@ export class AppComponent implements OnInit {
   referenceUrl: string | null = null;
   version: string | null = null;
 
-  constructor(private router: Router, private route: ActivatedRoute, private titleService: Title) {
+  // Variables to hold the mouse position
+  mouseX: number = 0;
+  mouseY: number = 0;
+
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private titleService: Title,
+    private mouseCursorService: MouseCursorService  // Inject MouseCursorService
+  ) {
     this.router.events
       .pipe(
         filter(event => event instanceof NavigationEnd),
@@ -36,5 +46,13 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    // Subscribe to the mouse cursor's X and Y position from the service
+    this.mouseCursorService.mouseX$.subscribe((x: number) => {
+      this.mouseX = x;  // Update mouseX
+    });
+
+    this.mouseCursorService.mouseY$.subscribe((y: number) => {
+      this.mouseY = y;  // Update mouseY
+    });
   }
 }

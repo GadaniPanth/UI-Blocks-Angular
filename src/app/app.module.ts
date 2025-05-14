@@ -13,7 +13,10 @@ import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
 import { AtroposComponent } from './atropos/atropos.component';
 import { TabPanelComponent } from './tab-panel/tab-panel.component';
 import { AccordionComponent } from './accordion/accordion.component';
-import { ScrollEleComponent } from './scroll-ele/scroll-ele.component';
+import { CalenderComponent } from './calender/calender.component';
+import { DatePickerComponent } from './date-picker/date-picker.component';
+import { ScrollingPageComponent } from './scrolling-page/scrolling-page.component';
+import { ParallexComponent } from './parallex/parallex.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { ScrollEleComponent } from './scroll-ele/scroll-ele.component';
     AtroposComponent,
     TabPanelComponent,
     AccordionComponent,
-    ScrollEleComponent,
+    CalenderComponent,
+    DatePickerComponent,
+    ScrollingPageComponent,
+    ParallexComponent
   ],
   imports: [
     // BrowserAnimationsModule,

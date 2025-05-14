@@ -1,0 +1,31 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.parallax-section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax magic */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 8vw;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.text-overlay {
+  max-width: 600px;
+  color: white;
+}
+
+.text-overlay p {
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 0;
+  font-family: 'Georgia', serif;
+}
