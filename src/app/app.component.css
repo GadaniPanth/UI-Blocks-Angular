@@ -139,7 +139,7 @@
   left: 10%;
   width: 80%;
   height: 2px;
-  background-color: white;
+  background-color: #df0732;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease-in-out;
@@ -167,7 +167,7 @@
   width: 30px;
   height: 2px;
   border-radius: 4px;
-  background: #ea2b44;
+  background: #df0732;
   transition: 0.5s;
 }
 
