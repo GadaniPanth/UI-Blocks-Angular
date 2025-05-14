@@ -19,6 +19,7 @@ import { ScrollingPageComponent } from './scrolling-page/scrolling-page.componen
 import { ParallexComponent } from './parallex/parallex.component';
 import { ScrollEleComponent } from './scroll-ele/scroll-ele.component';
 import { ScrollRevealGridComponent } from './scroll-reveal-grid/scroll-reveal-grid.component';
+import { ExtraComponent } from './extra/extra.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ScrollRevealGridComponent } from './scroll-reveal-grid/scroll-reveal-gr
     ParallexComponent,
     ScrollEleComponent,
     ScrollRevealGridComponent,
+    ExtraComponent,
   ],
   imports: [
     // BrowserAnimationsModule,
