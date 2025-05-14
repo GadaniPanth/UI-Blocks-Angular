@@ -23,7 +23,7 @@ export class ScrollRevealGridComponent implements OnInit {
         trigger: '.container',
         start: 'top 0',
         scrub: true,
-        markers: true,
+        // markers: true,
         pin: true
       }
     })
