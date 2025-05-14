@@ -1,9 +1,8 @@
 /* Whole nav bar fades in on hover */
 .top-nav {
   position: fixed;
-  top: 0;
-  right: 0;
-  padding: 15px 20px;
+  top: 20px;
+  right: 20px;
   opacity: 0.3;
   transition: opacity 0.6s ease-in-out;
   z-index: 1000;
@@ -13,7 +12,7 @@
   opacity: 1;
 }
 
-/* Horizontal layout */
+/* Make nav items horizontal */
 .nav-list {
   display: flex;
   gap: 15px;
@@ -22,34 +21,40 @@
   padding: 0;
 }
 
-/* Each nav item */
+/* Circle-style nav item */
 .nav-item {
-  padding: 10px 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
   color: white;
   border: 2px solid transparent;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
   position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-/* Hover effect: red border + circular shape */
+/* On hover: red border and white underline */
 .nav-item:hover {
   border-color: red;
-  background-color: transparent;
 }
 
-/* Optional underline on hover */
+/* White underline on hover */
 .nav-item::after {
   content: '';
   position: absolute;
   bottom: 5px;
-  left: 15%;
-  width: 70%;
+  left: 10%;
+  width: 80%;
   height: 2px;
   background-color: white;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: center;
   transition: transform 0.3s ease-in-out;
 }
 
