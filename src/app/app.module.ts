@@ -13,6 +13,7 @@ import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
 import { AtroposComponent } from './atropos/atropos.component';
 import { TabPanelComponent } from './tab-panel/tab-panel.component';
 import { AccordionComponent } from './accordion/accordion.component';
+import { ScrollEleComponent } from './scroll-ele/scroll-ele.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AccordionComponent } from './accordion/accordion.component';
     AtroposComponent,
     TabPanelComponent,
     AccordionComponent,
+    ScrollEleComponent,
   ],
   imports: [
     // BrowserAnimationsModule,

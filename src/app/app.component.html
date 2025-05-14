@@ -1,4 +1,4 @@
-<div class="main_content">
+<div class="main_content" style="overflow-x: hidden;">
   <div class="links">
     <a routerLink="/lightbox" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
       true}" class="font_20">LightBox</a>
@@ -14,6 +14,8 @@
       true}" class="font_20">Accordion</a>
     <a routerLink="/tab-panel" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
       true}" class="font_20">Tab Panel</a>
+    <a routerLink="/scroll" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+      true}" class="font_20">Scroll Text</a>
   </div>
   <router-outlet></router-outlet>
   <a [href]="referenceUrl" *ngIf="referenceUrl" target="_blank" rel="noopener noreferrer" class="ref_url">Reference</a>
