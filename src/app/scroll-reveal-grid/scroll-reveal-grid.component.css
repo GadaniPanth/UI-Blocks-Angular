@@ -18,7 +18,7 @@ video {
     gap: 16px;
     /* position: sticky;
     top: 0; */
-    scale: 3;
+    scale: 3.1;
 }
 
 .img_containter {
@@ -28,11 +28,10 @@ video {
     /* Center horizontally */
     align-items: center;
     /* Center vertically */
-    width: 100%;
-    height: 100%;
+    width: 580px;
+    height: 330px;
 }
 
 .img_containter img {
     background: linear-gradient(black, cyan, black);
-
 }

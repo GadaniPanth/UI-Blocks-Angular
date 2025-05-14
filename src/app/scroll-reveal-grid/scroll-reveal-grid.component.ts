@@ -12,6 +12,7 @@ export class ScrollRevealGridComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
   ngAfterViewInit() {
@@ -25,7 +26,7 @@ export class ScrollRevealGridComponent implements OnInit {
       scrollTrigger: {
         trigger: '.container',
         start: 'top 0',
-        end: '+=500',
+        end: `+=${grid.scrollHeight}`,
         scrub: true,
         // markers: true,
         pin: true
