@@ -32,7 +32,7 @@ import { ScrollEleComponent } from './scroll-ele/scroll-ele.component';
     CalenderComponent,
     DatePickerComponent,
     ScrollingPageComponent,
-    ParallexComponent
+    ParallexComponent,
     ScrollEleComponent,
   ],
   imports: [
