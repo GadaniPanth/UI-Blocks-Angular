@@ -1,14 +1,16 @@
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide" *ngFor="let img of images">
-            <img [src]="img.src" alt="altImg">
+<div class="container pd50">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let img of images">
+                <img [src]="img.src" alt="altImg">
+            </div>
         </div>
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
     </div>
-
-    <!-- Navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-    <!-- Pagination -->
-    <div class="swiper-pagination"></div>
 </div>
