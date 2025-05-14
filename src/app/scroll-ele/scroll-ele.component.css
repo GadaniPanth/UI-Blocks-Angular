@@ -8,7 +8,7 @@
 }
 
 .img-container,
-.image-container {
+.fixed-container {
     height: 100vh;
     scroll-snap-align: start;
     display: flex;
@@ -18,20 +18,20 @@
 }
 
 .img-container:last-of-type {
-    height: 80vh;
+    /* height: 80vh; */
 }
 
-.image-container {
+.fixed-container {
     background: transparent;
-    position: sticky;
+    position: fixed;
     top: 0;
     /* z-index: -1; */
     width: 100%;
-    z-index: 99;
+    z-index: 9999;
 }
 
 .img-container h2,
-.image-container h2 {
+.fixed-container h2 {
     color: #0cdcf7;
     margin: 0;
     font-family: "Azeret Mono", monospace;
@@ -50,20 +50,17 @@
 }
 
 
-.image-container h2 {
+.fixed-container h2 {
     width: 100%;
     text-align: center;
     opacity: 1;
     position: static;
 }
 
-/* .image-container h2::before {
-    content: '';
-    position: absolute;
-    top: -50vh;
-    left: 0;
-    width: 100%;
-    height: 64vh;
-    background: #1e1e1e;
-    z-index: -1;
-} */
+.swiper-container {
+    height: 100vh;
+}
+
+.swiper-wrapper {
+    height: 100%;
+}

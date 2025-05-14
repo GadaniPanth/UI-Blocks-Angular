@@ -21,6 +21,10 @@ video {
     scale: 3.1;
 }
 
+::ng-deep .swiper-container {
+    /* width: 60%; */
+}
+
 .img_containter {
     display: flex;
     /* Flexbox to center the content */
