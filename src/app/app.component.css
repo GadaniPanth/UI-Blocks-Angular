@@ -73,7 +73,7 @@
   position: fixed;
   top: 10px;
   right: 20px;
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity 0.6s ease-in-out;
   z-index: 1000;
   width: 80%;
@@ -82,7 +82,7 @@
 }
 
 .top-nav:hover {
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 /* Make nav items horizontal */
@@ -111,13 +111,19 @@
   font-weight: bold;
   font-size: 12px;
   text-decoration: none;
-  padding: 5px 0;
 }
 
 .nav-item a {
   text-decoration: none;
+  padding: 5px 0;
+  transition: all 0.4s ease-in-out;
   color: inherit;
   width: fit-content;
+  opacity: 0;
+}
+
+.top-nav:hover .nav-item a {
+  opacity: 1;
 }
 
 /* On hover: red border and white underline */
@@ -126,7 +132,7 @@
 } */
 
 /* White underline on hover */
-.nav-item::after {
+.nav-item:not(.toggle)::after {
   content: '';
   position: absolute;
   bottom: 0px;
@@ -141,4 +147,57 @@
 
 .nav-item:hover::after {
   transform: scaleX(1);
+}
+
+.toggle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  /* background: #fff; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.toggle span {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  border-radius: 4px;
+  background: #ea2b44;
+  transition: 0.5s;
+}
+
+.toggle span:nth-child(2) {
+  transform: translateY(-15px);
+  width: 25px;
+  left: 15px;
+}
+
+.toggle span:nth-child(3) {
+  transform: translateY(15px);
+  width: 15px;
+  left: 15px;
+}
+
+.nav-list:hover .toggle span:nth-child(1),
+.toggle:hover span:nth-child(1) {
+  transform: translateX(60px);
+}
+
+.nav-list:hover .toggle span:nth-child(2),
+.toggle:hover span:nth-child(2) {
+  width: 40px;
+  transform: translateX(0) rotate(45deg);
+  transition-delay: 0.2s;
+}
+
+.nav-list:hover .toggle span:nth-child(3),
+.toggle:hover span:nth-child(3) {
+  width: 40px;
+  transform: translateX(0) rotate(-45deg);
+  transition-delay: 0.4s;
 }
