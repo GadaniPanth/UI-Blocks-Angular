@@ -18,6 +18,7 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
 import { ScrollingPageComponent } from './scrolling-page/scrolling-page.component';
 import { ParallexComponent } from './parallex/parallex.component';
 import { ScrollEleComponent } from './scroll-ele/scroll-ele.component';
+import { ScrollRevealGridComponent } from './scroll-reveal-grid/scroll-reveal-grid.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ScrollEleComponent } from './scroll-ele/scroll-ele.component';
     ScrollingPageComponent,
     ParallexComponent,
     ScrollEleComponent,
+    ScrollRevealGridComponent,
   ],
   imports: [
     // BrowserAnimationsModule,

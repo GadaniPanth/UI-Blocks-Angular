@@ -12,6 +12,7 @@ import { ScrollEleComponent } from './scroll-ele/scroll-ele.component';
 import { CalenderComponent } from './calender/calender.component';
 import { ScrollingPageComponent } from './scrolling-page/scrolling-page.component';
 import { ParallexComponent } from './parallex/parallex.component';
+import { ScrollRevealGridComponent } from './scroll-reveal-grid/scroll-reveal-grid.component';
 
 const routes: Routes = [
   {
@@ -57,6 +58,7 @@ const routes: Routes = [
   {
     path: 'scroll',
     component: ScrollEleComponent,
+    data: { title: 'Scroll Text', version: null, referenceUrl: '' }
   },
   {
     path: 'calender',
@@ -72,6 +74,11 @@ const routes: Routes = [
     path: 'parallex',
     component: ParallexComponent,
     data: { title: 'Parallex Effect Preview', version: null, referenceUrl: '' }
+  },
+  {
+    path: 'scroll-grid',
+    component: ScrollRevealGridComponent,
+    data: { title: 'Scroll Reveal Grid', version: null, referenceUrl: '' }
   }
 ];
 

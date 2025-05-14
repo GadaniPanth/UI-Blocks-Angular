@@ -21,7 +21,7 @@ img {
 .main_content {
     width: 100%;
     /* height: 100%; */
-    padding: 50px;
+    /* padding: 50px; */
     height: max-content;
 }
 
@@ -88,19 +88,19 @@ img {
 }
 
 .page-wrapper {
-  transition: background-color 0.8s ease-in-out;
-  padding: 0 !important;
+    transition: background-color 0.8s ease-in-out;
+    padding: 0 !important;
 }
 
 
 .cursor-circle {
-  position: fixed;
-  width: 12px;
-  height: 12px;
-  background-color: red;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: top 0.05s linear, left 0.05s linear;
-  z-index: 1000;
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: top 0.05s linear, left 0.05s linear;
+    z-index: 1000;
 }

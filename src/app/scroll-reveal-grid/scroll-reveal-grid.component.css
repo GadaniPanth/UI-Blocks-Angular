@@ -1,0 +1,15 @@
+.container {
+    padding: 50px;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.img_containter {
+    width: 100%;
+    padding: 40px;
+}
