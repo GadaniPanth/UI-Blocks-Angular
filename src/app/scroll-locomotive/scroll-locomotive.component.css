@@ -30,10 +30,23 @@ p {
     padding: 50px;
 }
 
-.img_container img {
+
+
+.img_container .img_wrapper {
     width: 600px;
     height: 600px;
-    /* object-fit: cover; */
+    overflow: hidden;
+}
+
+.img_container .img_wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img_container .img_wrapper img {
+    /* transition: transform .8s ease-in-out; */
+    will-change: transform;
 }
 
 .img_container {
@@ -41,18 +54,18 @@ p {
     height: 50vh;
 }
 
-.img_container:nth-child(odd) img {
+.img_container:nth-child(odd) .img_wrapper {
     float: left;
 }
 
-.img_container:nth-child(even) img {
+.img_container:nth-child(even) .img_wrapper {
     float: right;
 }
 
-.img_container:nth-child(1) img {
+.img_container:nth-child(1) .img_wrapper {
     margin-left: 300px;
 }
 
-.img_container:nth-child(4) img {
+.img_container:nth-child(4) .img_wrapper {
     margin-right: 300px;
 }
