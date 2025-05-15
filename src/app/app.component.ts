@@ -20,7 +20,7 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
     trigger('overlayAnimation2', [
       state('hidden', style({ opacity: 0 })),
       state('visible', style({ opacity: 1 })),
-      transition('hidden => visible', animate('100ms .2s ease')),
+      transition('hidden => visible', animate('100ms .05s ease')),
       transition('visible => hidden', animate('1s .3s ease', style({ transform: 'translateY(-100%)' }))),
     ]),
     trigger('routeAnimations', [
