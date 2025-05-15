@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
-import { MouseCursorService } from './mouse-cursor.service';  // Import MouseCursorService
 import gsap from 'gsap';
+// declare const LocomotiveScroll: any;
 
 @Component({
   selector: 'app-root',
@@ -103,6 +103,15 @@ export class AppComponent implements OnInit {
     });
 
   }
+
+  // ngAfterViewInit(): void {
+  //   const scroll = new LocomotiveScroll({
+  //     smooth: true
+  //   });
+
+  //   console.log('Locomotive Scroll initialized:', scroll);
+
+  // }
 
   ngOnDestroy(): void {
     window.removeEventListener('mousemove', this.mouseMoveHandler);

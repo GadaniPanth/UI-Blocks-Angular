@@ -13,6 +13,7 @@ import { CalenderComponent } from './calender/calender.component';
 import { ScrollingPageComponent } from './scrolling-page/scrolling-page.component';
 import { ParallexComponent } from './parallex/parallex.component';
 import { ScrollRevealGridComponent } from './scroll-reveal-grid/scroll-reveal-grid.component';
+import { ScrollLocomotiveComponent } from './scroll-locomotive/scroll-locomotive.component';
 
 const routes: Routes = [
   {
@@ -79,6 +80,11 @@ const routes: Routes = [
     path: 'scroll-grid',
     component: ScrollRevealGridComponent,
     data: { title: 'Scroll Reveal Grid', version: null, referenceUrl: '' }
+  },
+  {
+    path: 'loco-scroll',
+    component: ScrollLocomotiveComponent,
+    data: { title: 'Locomotive Scroll', version: null, referenceUrl: '' }
   }
 ];
 

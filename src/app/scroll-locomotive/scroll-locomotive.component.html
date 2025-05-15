@@ -1,1 +1,16 @@
-<p>scroll-locomotive works!</p>
+<!-- scroll container -->
+<div data-scroll-container>
+
+    <!-- section with scrolling content -->
+    <section data-scroll-section style="height: 200vh; background: #f0f0f0;">
+        <h1 data-scroll data-scroll-speed="2">This text should scroll faster</h1>
+        <p data-scroll data-scroll-speed="-1">This text should scroll slower</p>
+    </section>
+
+    <section data-scroll-section style="height: 200vh; background: #d0d0d0;">
+        <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="3">
+            Horizontal scroll movement
+        </h2>
+    </section>
+
+</div>

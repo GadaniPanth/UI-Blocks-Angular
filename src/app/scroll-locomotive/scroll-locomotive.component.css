@@ -1,0 +1,9 @@
+:host {
+    /* display: block; */
+    /* height: 100vh; */
+    /* overflow: hidden; */
+}
+
+[data-scroll-container] {
+    overflow: hidden;
+}
