@@ -51,7 +51,10 @@
     </ul>
   </nav>
 
+  <!-- overlay.component.html -->
   <div class="overlay" [@overlayAnimation]="overlayState"></div>
+  <div class="overlay layer-cyan" [@overlayAnimation2]="overlayState"></div>
+  <!-- <div class="overlay layer-crimson" [@overlayAnimation3]="overlayState"></div> -->
   <div [@routeAnimations]="prepareRoute(routerOutlet)" class="route-container">
     <router-outlet #routerOutlet="outlet"></router-outlet>
   </div>

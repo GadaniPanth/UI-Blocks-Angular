@@ -141,16 +141,18 @@ img {
 /* Page transition effect */
 .overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #222;
-    /* Customize color */
+    inset: 0;
     z-index: 1000;
     pointer-events: none;
-    /* Don't block clicks */
+    overflow: hidden;
+    background-color: #1e1e1e;
 }
+
+.layer-cyan {
+    background-color: cyan;
+    z-index: 999;
+}
+
 
 .route-container {
     /* position: relative;
