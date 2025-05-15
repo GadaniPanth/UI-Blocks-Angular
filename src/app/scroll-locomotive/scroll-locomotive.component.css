@@ -11,6 +11,23 @@ p {
     font-size: 80px;
 }
 
+/* .scroll-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    pointer-events: none;
+    z-index: 1;
+} */
+
+[data-scroll-container] {
+    pointer-events: auto;
+    /* re-enable interaction inside content */
+}
+
 .horizontal {
     display: flex;
     align-items: center;
@@ -18,7 +35,7 @@ p {
     flex-wrap: nowrap;
     flex-shrink: 0;
     flex-basis: auto;
-    width: fit-content;
+    width: 100%;
     text-wrap: nowrap;
 }
 
