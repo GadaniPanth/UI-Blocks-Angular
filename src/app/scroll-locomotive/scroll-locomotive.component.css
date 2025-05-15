@@ -25,3 +25,34 @@ p {
 .horizontal h2 {
     width: fit-content;
 }
+
+.img_section {
+    padding: 50px;
+}
+
+.img_container img {
+    width: 600px;
+    height: 600px;
+    /* object-fit: cover; */
+}
+
+.img_container {
+    width: 100%;
+    height: 50vh;
+}
+
+.img_container:nth-child(odd) img {
+    float: left;
+}
+
+.img_container:nth-child(even) img {
+    float: right;
+}
+
+.img_container:nth-child(1) img {
+    margin-left: 300px;
+}
+
+.img_container:nth-child(4) img {
+    margin-right: 300px;
+}
