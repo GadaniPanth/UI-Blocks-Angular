@@ -21,6 +21,8 @@ import { ScrollEleComponent } from './scroll-ele/scroll-ele.component';
 import { ScrollRevealGridComponent } from './scroll-reveal-grid/scroll-reveal-grid.component';
 import { ExtraComponent } from './extra/extra.component';
 import { ScrollLocomotiveComponent } from './scroll-locomotive/scroll-locomotive.component';
+import { GsapTrialsComponent } from './gsap-trials/gsap-trials.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -40,20 +42,17 @@ import { ScrollLocomotiveComponent } from './scroll-locomotive/scroll-locomotive
     ScrollRevealGridComponent,
     ExtraComponent,
     ScrollLocomotiveComponent,
+    GsapTrialsComponent,
   ],
   imports: [
-    // BrowserAnimationsModule,
-    // ToastrModule.forRoot({
-    //   timeOut: 3000,
-    //   positionClass: 'toast-top-right',
-    //   preventDuplicates: true,
-    // }),
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    LightboxModule
+    LightboxModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

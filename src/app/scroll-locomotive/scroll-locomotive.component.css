@@ -28,6 +28,12 @@ p {
     /* re-enable interaction inside content */
 }
 
+h1 span {
+    display: inline-block;
+    margin: 0 2px;
+    transition: transform 0.3s ease;
+}
+
 .horizontal {
     display: flex;
     align-items: center;

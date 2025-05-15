@@ -136,3 +136,23 @@ img {
 [data-scroll-container] {
     overflow: hidden;
 }
+
+
+/* Page transition effect */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+    /* Customize color */
+    z-index: 1000;
+    pointer-events: none;
+    /* Don't block clicks */
+}
+
+.route-container {
+    /* position: relative;
+    overflow: hidden; */
+}

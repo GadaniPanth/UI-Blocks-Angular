@@ -40,4 +40,11 @@ export class ScrollLocomotiveComponent implements OnInit, AfterViewInit {
     //   });
     // });
   }
+
+  ngOnDestroy(): void {
+    if (this.scroll) {
+      this.scroll.destroy();
+      this.scroll = null;
+    }
+  }
 }
