@@ -20,6 +20,7 @@ import { ParallexComponent } from './parallex/parallex.component';
 import { ScrollEleComponent } from './scroll-ele/scroll-ele.component';
 import { ScrollRevealGridComponent } from './scroll-reveal-grid/scroll-reveal-grid.component';
 import { ExtraComponent } from './extra/extra.component';
+import { ScrollLocomotiveComponent } from './scroll-locomotive/scroll-locomotive.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ExtraComponent } from './extra/extra.component';
     ScrollEleComponent,
     ScrollRevealGridComponent,
     ExtraComponent,
+    ScrollLocomotiveComponent,
   ],
   imports: [
     // BrowserAnimationsModule,
