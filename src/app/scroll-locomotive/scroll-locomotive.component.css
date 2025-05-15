@@ -4,6 +4,24 @@
     /* overflow: hidden; */
 }
 
-[data-scroll-container] {
-    overflow: hidden;
+h1,
+h2,
+p {
+    color: black;
+    font-size: 80px;
+}
+
+.horizontal {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: fit-content;
+    text-wrap: nowrap;
+}
+
+.horizontal h2 {
+    width: fit-content;
 }
