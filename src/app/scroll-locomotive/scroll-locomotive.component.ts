@@ -21,7 +21,7 @@ export class ScrollLocomotiveComponent implements OnInit, AfterViewInit {
     });
 
     this.scroll.on('scroll', () => {
-      const images = document.querySelectorAll('.img_container .img_wrapper img');
+      const images = document.querySelectorAll('img');
       const windowHeight = window.innerHeight;
 
       images.forEach((img: Element) => {
