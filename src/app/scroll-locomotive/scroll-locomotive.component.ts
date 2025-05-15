@@ -20,24 +20,24 @@ export class ScrollLocomotiveComponent implements OnInit, AfterViewInit {
       smooth: true
     });
 
-    this.scroll.on('scroll', () => {
-      const images = document.querySelectorAll('img');
-      const windowHeight = window.innerHeight;
+    // this.scroll.on('scroll', () => {
+    //   const images = document.querySelectorAll('img');
+    //   const windowHeight = window.innerHeight;
 
-      images.forEach((img: Element) => {
-        const rect = img.getBoundingClientRect();
-        const distanceFromCenter = Math.abs((rect.top + rect.height / 2) - (windowHeight / 2));
-        const maxScale = 1.2;
-        const minScale = 1;
-        const scale = maxScale - (distanceFromCenter / windowHeight / 2);
-        const clampedScale = Math.max(minScale, Math.min(maxScale, scale));
+    //   images.forEach((img: Element) => {
+    //     const rect = img.getBoundingClientRect();
+    //     const distanceFromCenter = Math.abs((rect.top + rect.height / 2) - (windowHeight / 2));
+    //     const maxScale = 1.2;
+    //     const minScale = 1;
+    //     const scale = maxScale - (distanceFromCenter / windowHeight / 5);
+    //     const clampedScale = Math.max(minScale, Math.min(maxScale, scale));
 
-        gsap.to(img, {
-          scale: clampedScale,
-          duration: 1,
-          ease: "power2.out"
-        });
-      });
-    });
+    //     gsap.to(img, {
+    //       scale: clampedScale,
+    //       duration: 1,
+    //       ease: "power2.out"
+    //     });
+    //   });
+    // });
   }
 }

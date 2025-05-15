@@ -36,6 +36,7 @@ p {
     width: 600px;
     height: 600px;
     overflow: hidden;
+    border-radius: 16px;
 }
 
 .img_container .img_wrapper img {
