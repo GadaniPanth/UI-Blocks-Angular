@@ -130,3 +130,9 @@ img {
 .mlr-80 {
     margin: 0 80px !important;
 }
+
+
+/* Locomotive added Css */
+[data-scroll-container] {
+    overflow: hidden;
+}
