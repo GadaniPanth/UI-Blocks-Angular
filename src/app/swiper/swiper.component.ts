@@ -12,7 +12,7 @@ export class SwiperComponent implements OnInit {
   images: any = [];
   swiper!: Swiper;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     this.images = [
@@ -30,7 +30,7 @@ export class SwiperComponent implements OnInit {
     Swiper.use([Mousewheel]);
 
     this.swiper = new Swiper(".swiper-container", {
-      slidesPerView: "auto",
+      slidesPerView: 1,
       spaceBetween: 24,
       speed: 500,
       navigation: {

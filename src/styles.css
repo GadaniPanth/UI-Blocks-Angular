@@ -118,11 +118,26 @@ img {
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: top 0.05s linear, left 0.05s linear;
+    transition: top 0.05s linear, left 0.05s linear, all .05s ease;
     z-index: 1000;
     scale: 1;
 }
 
+.cursor-label {
+    position: fixed;
+    pointer-events: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: crimson;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2px 6px;
+    border-radius: 4px;
+    z-index: 9999;
+    display: none;
+    transition: all 0.2s ease;
+}
+
+/* Something else */
 .section-padding {
     padding: 110px 0;
 }

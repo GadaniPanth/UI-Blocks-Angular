@@ -32,6 +32,69 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
   ],
 })
 export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
+
+  cursorFunction() {
+    setTimeout(() => {
+      const cursorCircle = document.querySelector('.cursor-circle') as HTMLElement;
+
+      let cursorLabel = document.querySelector('.cursor-label') as HTMLElement;
+      if (!cursorLabel) {
+        cursorLabel = document.createElement('span');
+        cursorLabel.classList.add('cursor-label');
+        document.body.appendChild(cursorLabel);
+      }
+
+      const interactiveElements = document.querySelectorAll(`
+      h1, h2, h3, h4, h5, h6,
+      p, span, li, a, button,
+      img, .swiper_slide img, input, textarea, label, .content, .ref_url,
+      .swiper_slide, .swiper-button-prev, .swiper-button-next, .nav-item
+    `);
+
+      interactiveElements.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          const isSwiper = item.classList.contains('swiper_slide') ||
+            item.classList.contains('swiper-button-prev') ||
+            item.classList.contains('swiper-button-next');
+
+          gsap.to(cursorCircle, {
+            width: '42px',
+            height: '42px',
+            backgroundColor: 'transparent',
+            // backgroundColor: isSwiper ? 'red' : 'transparent',
+            borderColor: isSwiper ? 'red' : 'cyan',
+            duration: 0.3
+          });
+
+          if (isSwiper) {
+            cursorLabel.textContent = item.classList.contains('swiper-button-prev') ? 'prev' : 'next';
+            cursorLabel.style.display = 'block';
+          }
+        });
+
+        item.addEventListener('mouseleave', () => {
+          gsap.to(cursorCircle, {
+            width: '12px',
+            height: '12px',
+            backgroundColor: 'cyan',
+            borderColor: 'cyan',
+            duration: 0.3
+          });
+
+          cursorLabel.style.display = 'none';
+        });
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        if (cursorLabel) {
+          cursorLabel.style.left = `${e.clientX + 15}px`;
+          cursorLabel.style.top = `${e.clientY + 15}px`;
+        }
+      });
+    }, 200);
+  }
+
+
   referenceUrl: string | null = null;
   version: string | null = null;
 
@@ -60,12 +123,11 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
       if (event instanceof NavigationEnd) {
         this.navigationInProgress = false;
-        // Small delay so overlay slide-out is visible
         setTimeout(() => this.hideOverlay(), 200);
+
+        this.cursorFunction();
       }
     });
-
-    // Update page title and other metadata on NavigationEnd
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       map(() => {
@@ -101,34 +163,12 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    const interactiveElements = document.querySelectorAll(`
-      h1, h2, h3, h4, h5, h6,
-      p, span, li, a, button,
-      img, input, textarea, label, .content, .ref_url, .swiper_slide, .swiper-button-prev, .swiper-button-next, .nav-item
-    `);
-
-    interactiveElements.forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        gsap.to('.cursor-circle', {
-          width: '42px',
-          height: '42px',
-          backgroundColor: 'transparent',
-          duration: 0.3
-        });
-      });
-      item.addEventListener('mouseleave', () => {
-        gsap.to('.cursor-circle', {
-          width: '12px',
-          height: '12px',
-          backgroundColor: 'cyan',
-          duration: 0.3
-        });
-      });
-    });
+    this.cursorFunction();
   }
 
   ngOnDestroy(): void {
     window.removeEventListener('mousemove', this.mouseMoveHandler);
+    gsap.killTweensOf('.cursor-circle')
   }
 
   showOverlay() {
