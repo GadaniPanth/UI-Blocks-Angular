@@ -1,7 +1,7 @@
 //6.8.4
 
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
-import Swiper, { Mousewheel, Navigation, Pagination } from "swiper";
+import Swiper, { Keyboard, Mousewheel, Navigation, Pagination } from "swiper";
 
 @Component({
   selector: "app-swiper",
@@ -28,11 +28,16 @@ export class SwiperComponent implements OnInit {
     Swiper.use([Navigation]);
     Swiper.use([Pagination]);
     Swiper.use([Mousewheel]);
+    Swiper.use([Keyboard]);
 
     this.swiper = new Swiper(".swiper-container", {
       slidesPerView: 1,
       spaceBetween: 24,
       speed: 500,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true, // prevents keyboard control when Swiper is out of view
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
