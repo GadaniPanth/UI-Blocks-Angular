@@ -23,6 +23,7 @@ import { ExtraComponent } from './extra/extra.component';
 import { ScrollLocomotiveComponent } from './scroll-locomotive/scroll-locomotive.component';
 import { GsapTrialsComponent } from './gsap-trials/gsap-trials.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NotGitComponent } from './not-git/not-git.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ExtraComponent,
     ScrollLocomotiveComponent,
     GsapTrialsComponent,
+    NotGitComponent,
   ],
   imports: [
     BrowserAnimationsModule,

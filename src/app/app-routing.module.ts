@@ -15,6 +15,7 @@ import { ParallexComponent } from './parallex/parallex.component';
 import { ScrollRevealGridComponent } from './scroll-reveal-grid/scroll-reveal-grid.component';
 import { ScrollLocomotiveComponent } from './scroll-locomotive/scroll-locomotive.component';
 import { GsapTrialsComponent } from './gsap-trials/gsap-trials.component';
+import { NotGitComponent } from './not-git/not-git.component';
 
 const routes: Routes = [
   {
@@ -91,6 +92,11 @@ const routes: Routes = [
     path: 'gsap-trials',
     component: GsapTrialsComponent,
     data: { title: 'Gsap Trials', version: null, referenceUrl: '' }
+  },
+  {
+    path: 'not-git',
+    component: NotGitComponent,
+    data: { title: 'Not Git', version: null, referenceUrl: '' }
   }
 ];
 
