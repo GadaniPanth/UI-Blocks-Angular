@@ -45,7 +45,7 @@ img {
 }
 
 .container {
-    width: 50vw;
+    width: 55vw;
     height: 100dvh;
     background-color: white;
     color: black;
@@ -101,15 +101,22 @@ h6 {
 
 .sec2 {
     background-color: #798E7B;
-    width: 35vw;
+    width: 25vw;
 }
 
 .sec3 {
     background-color: #B692A1;
-    width: 20vw;
+    width: 15vw;
 }
 
 .sec4 {
     background-color: #7291A8;
     width: 10vw;
+}
+
+.roll-out {
+    display: inline-block;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
 }
